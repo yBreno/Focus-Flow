@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Focus Flow</title>
+</head>
+    <body class='bg-gradient-to-b from-[#050816] via-[#0B1026] to-black'>
+        <!-- Navbar -->
+            <nav class="bg-neutral-primary fixed w-full z-20 top-0 start-0 border-b border-default">
+            <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <img src="Imagens\icon.png" class="h-7" alt="Flowbite Logo" />
+                <span class="self-center text-xl text-heading font-semibold whitespace-nowrap">Focus Flow</span>
+            </a>
+            <div class="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+                <button type="button" class="flex text-sm bg-neutral-primary rounded-full md:me-0 focus:ring-4 focus:ring-neutral-tertiary" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
+                    <span class="sr-only">Menu</span>
+                    <img class="w-8 h-8 rounded-full" src="Imagens\user.png" alt="user photo">
+                </button>
+                <!-- Dropdown menu -->
+                <div class="z-50 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-44" id="user-dropdown">
+                    <div class="px-4 py-3 text-sm border-b border-default">
+                    <span class="block text-heading font-medium">Breno Redusino</span>
+                    <span class="block text-body truncate">breno@email.com</span>
+                    </div>
+                    <ul class="p-2 text-sm text-body font-medium" aria-labelledby="user-menu-button">
+                    <li>
+                        <a href="#" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">Tela Inicial</a>
+                    </li>
+                    <li>
+                        <a href="#" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">Opções</a>
+                    </li>
+                    <li>
+                        <a href="#" class="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">Logout</a>
+                    </li>
+                    </ul>
+                </div>
+                <button data-collapse-toggle="navbar-user" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-body rounded-base md:hidden hover:bg-neutral-secondary-soft hover:text-heading focus:outline-none focus:ring-2 focus:ring-neutral-tertiary" aria-controls="navbar-user" aria-expanded="false">
+                    <span class="sr-only">Abrir menu</span>
+                    <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14"/></svg>
+                </button>
+            </div>
+            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-user">
+                <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-default rounded-base bg-neutral-secondary-soft md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-neutral-primary">
+                <li>
+                    <a href="#" class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">Inicio</a>
+                </li>
+                <li>
+                    <a href="#" class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">Explorar</a>
+                </li>
+                <li>
+                    <a href="#" class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">Playlists</a>
+                </li>
+                <li>
+                    <a href="#" class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">Artistas</a>
+                </li>
+                </ul>
+            </div>
+            </div>
+            </nav>
+
+            <!-- HERO -->
+
+            <section class="py-16 text-white overflow-hidden">
+                <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
+                    <a href="#" class="inline-flex justify-between items-center py-1 px-1 pr-4 mb-7 text-sm text-gray-700 bg-gray-100 rounded-full dark:bg-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700" role="alert">
+                        <span class="text-xs bg-primary-600 rounded-full text-white px-4 py-1.5 mr-3">Novo</span> <span class="text-sm font-medium">Lancamento do album Equalibrivm  ultrapassa espectativas</span> 
+                        <svg class="ml-2 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+                    </a>
+                    <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Sinta a musica <br><span>Como nunca antes</span></h1>
+                    <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">Milhões de músicas, podcasts e playlists personalizadas esperando por você.</p>
+                    <div class="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
+                        <a href="#" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
+                            Começar agora
+                            <svg class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                        </a>
+                        <a href="#" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-gray-900 rounded-lg border border-gray-300 hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
+                            <svg class="mr-2 -ml-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z"></path></svg>
+                            Favoritos
+                        </a>  
+                    </div>
+                    <div class="px-4 mx-auto text-center md:max-w-screen-md lg:max-w-screen-lg lg:px-36">
+                        <span class="font-semibold text-gray-400 uppercase">Portal patrocinado por</span>
+                        <div class="flex flex-wrap justify-center items-center gap-8 mt-8">
+
+                        <a href="https://youtube.com"
+                        class="hover:scale-110 transition-all duration-300">
+
+                            <img
+                                src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png"
+                                alt="YouTube"
+                                class="h-8">
+                        </a>
+
+                        <a href="https://spotify.com"
+                        class="hover:scale-110 transition-all duration-300">
+
+                            <img
+                                src="https://upload.wikimedia.org/wikipedia/commons/8/84/Spotify_icon.svg"
+                                alt="Spotify"
+                                class="h-10">
+                        </a>
+
+                        <a href="https://music.apple.com"
+                        class="hover:scale-110 transition-all duration-300">
+
+                            <img
+                                src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Apple_Music_icon.svg"
+                                alt="Apple Music"
+                                class="h-8">
+                        </a>
+
+                    </div>
+                    </div> 
+                </div>
+            </section>
+
+            <!-- Carrosel -->
+            <section class="py-16 text-white overflow-hidden">
+
+                <h2 class="text-4xl font-bold mb-10 px-8">
+                    Lançamentos Recentes
+                </h2>
+
+                <div class="relative">
+
+                    <!-- CONTAINER -->
+                    <div 
+                        id="carousel"
+                        class="flex gap-6 overflow-x-auto scroll-smooth px-8">
+
+                        <!-- CARD 1 -->
+                        <div class="min-w-[280px] bg-slate-900 rounded-3xl p-6 hover:scale-105 hover:shadow-[0_0_30px_rgba(168,85,247,0.4)] transition-all duration-300">
+
+                            <div class="relative h-64 rounded-2xl overflow-hidden">
+
+                                <img 
+                                    src="Imagens/Album/album1.jpg"
+                                    class="w-full h-full object-cover">
+
+                                <!-- PLAY -->
+                                <button class="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-all duration-300">
+
+                                    <div class="bg-white text-black w-16 h-16 rounded-full flex items-center justify-center text-2xl hover:scale-110 transition-all duration-300 shadow-lg">
+                                        ▶
+                                    </div>
+
+                                </button>
+
+                            </div>
+
+                            <h3 class="text-2xl font-bold mt-6">
+                                We are i-dle
+                            </h3>
+
+                            <p class="text-gray-400">
+                                i-dle
+                            </p>
+
+                        </div>
+
+                        <!-- CARD 2 -->
+                        <div class="min-w-[280px] bg-slate-900 rounded-3xl p-6 hover:scale-105 hover:shadow-[0_0_30px_rgba(236,72,153,0.4)] transition-all duration-300">
+
+                            <div class="relative h-64 rounded-2xl overflow-hidden">
+
+                                <img 
+                                    src="Imagens/Album/album2.jpg"
+                                    class="w-full h-full object-cover">
+
+                                <button class="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-all duration-300">
+
+                                    <div class="bg-white text-black w-16 h-16 rounded-full flex items-center justify-center text-2xl hover:scale-110 transition-all duration-300 shadow-lg">
+                                        ▶
+                                    </div>
+
+                                </button>
+
+                            </div>
+
+                            <h3 class="text-2xl font-bold mt-6">
+                                Equilibrivm
+                            </h3>
+
+                            <p class="text-gray-400">
+                                Anitta
+                            </p>
+
+                        </div>
+
+                        <!-- CARD 3 -->
+                        <div class="min-w-[280px] bg-slate-900 rounded-3xl p-6 hover:scale-105 hover:shadow-[0_0_30px_rgba(234,179,8,0.4)] transition-all duration-300">
+
+                            <div class="relative h-64 rounded-2xl overflow-hidden">
+
+                                <img 
+                                    src="Imagens/Album/album3.jpg"
+                                    class="w-full h-full object-cover">
+
+                                <button class="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-all duration-300">
+
+                                    <div class="bg-white text-black w-16 h-16 rounded-full flex items-center justify-center text-2xl hover:scale-110 transition-all duration-300 shadow-lg">
+                                        ▶
+                                    </div>
+
+                                </button>
+
+                            </div>
+
+                            <h3 class="text-2xl font-bold mt-6">
+                                Escândalo Íntimo
+                            </h3>
+
+                            <p class="text-gray-400">
+                                Luiza Sonza
+                            </p>
+
+                        </div>
+
+                        <!-- CARD 4 -->
+                        <div class="min-w-[280px] bg-slate-900 rounded-3xl p-6 hover:scale-105 hover:shadow-[0_0_30px_rgba(249,115,22,0.4)] transition-all duration-300">
+
+                            <div class="relative h-64 rounded-2xl overflow-hidden">
+
+                                <img 
+                                    src="Imagens/Album/album4.jpg"
+                                    class="w-full h-full object-cover">
+
+                                <button class="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-all duration-300">
+
+                                    <div class="bg-white text-black w-16 h-16 rounded-full flex items-center justify-center text-2xl hover:scale-110 transition-all duration-300 shadow-lg">
+                                        ▶
+                                    </div>
+
+                                </button>
+
+                            </div>
+
+                            <h3 class="text-2xl font-bold mt-6">
+                                Short n Sweet
+                            </h3>
+
+                            <p class="text-gray-400">
+                                Sabrina Carpenter
+                            </p>
+
+                        </div>
+
+                        <!-- CARD 5 -->
+                        <div class="min-w-[280px] bg-slate-900 rounded-3xl p-6 hover:scale-105 hover:shadow-[0_0_30px_rgba(59,130,246,0.4)] transition-all duration-300">
+
+                            <div class="relative h-64 rounded-2xl overflow-hidden">
+
+                                <img 
+                                    src="Imagens/Album/album5.jpg"
+                                    class="w-full h-full object-cover">
+
+                                <button class="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-all duration-300">
+
+                                    <div class="bg-white text-black w-16 h-16 rounded-full flex items-center justify-center text-2xl hover:scale-110 transition-all duration-300 shadow-lg">
+                                        ▶
+                                    </div>
+
+                                </button>
+
+                            </div>
+
+                            <h3 class="text-2xl font-bold mt-6">
+                                Beautiful Chaos
+                            </h3>
+
+                            <p class="text-gray-400">
+                                Katseye
+                            </p>
+
+                        </div>
+
+                        <!-- CARD 6 -->
+                        <div class="min-w-[280px] bg-slate-900 rounded-3xl p-6 hover:scale-105 hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] transition-all duration-300">
+
+                            <div class="relative h-64 rounded-2xl overflow-hidden">
+
+                                <img 
+                                    src="Imagens/Album/album6.jpg"
+                                    class="w-full h-full object-cover">
+
+                                <button class="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-all duration-300">
+
+                                    <div class="bg-white text-black w-16 h-16 rounded-full flex items-center justify-center text-2xl hover:scale-110 transition-all duration-300 shadow-lg">
+                                        ▶
+                                    </div>
+
+                                </button>
+
+                            </div>
+
+                            <h3 class="text-2xl font-bold mt-6">
+                                Mayhem
+                            </h3>
+
+                            <p class="text-gray-400">
+                                Lady Gaga
+                            </p>
+
+                        </div>
+
+                        <!-- CARD 7 -->
+                        <div class="min-w-[280px] bg-slate-900 rounded-3xl p-6 hover:scale-105 hover:shadow-[0_0_30px_rgba(59,130,246,0.4)] transition-all duration-300">
+
+                            <div class="relative h-64 rounded-2xl overflow-hidden">
+
+                                <img 
+                                    src="Imagens/Album/album7.jpg"
+                                    class="w-full h-full object-cover">
+
+                                <button class="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-all duration-300">
+
+                                    <div class="bg-white text-black w-16 h-16 rounded-full flex items-center justify-center text-2xl hover:scale-110 transition-all duration-300 shadow-lg">
+                                        ▶
+                                    </div>
+
+                                </button>
+
+                            </div>
+
+                            <h3 class="text-2xl font-bold mt-6">
+                                Sequencias #1
+                            </h3>
+
+                            <p class="text-gray-400">
+                                Pedro Sampaio
+                            </p>
+
+                        </div>
+
+                        <!-- CARD 8 -->
+                        <div class="min-w-[280px] bg-slate-900 rounded-3xl p-6 hover:scale-105 hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] transition-all duration-300">
+
+                            <div class="relative h-64 rounded-2xl overflow-hidden">
+
+                                <img 
+                                    src="Imagens/Album/album8.jpg"
+                                    class="w-full h-full object-cover">
+
+                                <button class="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-all duration-300">
+
+                                    <div class="bg-white text-black w-16 h-16 rounded-full flex items-center justify-center text-2xl hover:scale-110 transition-all duration-300 shadow-lg">
+                                        ▶
+                                    </div>
+
+                                </button>
+
+                            </div>
+
+                            <h3 class="text-2xl font-bold mt-6">
+                                Golden
+                            </h3>
+
+                            <p class="text-gray-400">
+                                Huntrix - KPOP Demon Hunters
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- ESCONDER SCROLLBAR -->
+            <style>
+
+            ::-webkit-scrollbar {
+                display: none;
+            }
+
+            </style>
+
+            <!-- SCRIPT -->
+            <script>
+
+                const carousel = document.getElementById('carousel');
+
+                function autoSlide() {
+
+                    carousel.scrollBy({
+                        left: 320,
+                        behavior: 'smooth'
+                    });
+
+                    // VOLTA AO COMEÇO
+                    if (
+                        carousel.scrollLeft + carousel.clientWidth >= 
+                        carousel.scrollWidth - 10
+                    ) {
+
+                        setTimeout(() => {
+
+                            carousel.scrollTo({
+                                left: 0,
+                                behavior: 'smooth'
+                            });
+
+                        }, 1000);
+
+                    }
+
+                }
+
+                setInterval(autoSlide, 3000);
+
+            </script>
+
+
+            <section class="text-white py-20 px-8">
+
+                <div class="max-w-xl mx-auto">
+
+                    <img src="Imagens\sininho.png" alt="">
+
+                    <h2 class="text-4xl font-bold mb-3 text-center">
+                        Fique por dentro das novidades do mundo da música!
+                    </h2>
+
+                    <p class="text-gray-400 text-center mb-10">
+                        Receba novidades, playlists e lançamentos exclusivos.
+                    </p>
+
+                    <form class="space-y-8">
+
+                        <!-- NOME -->
+                        <div class="relative z-0 w-full group">
+
+                            <input 
+                                type="text" 
+                                name="nome" 
+                                id="nome"
+                                class="block py-3 px-0 w-full text-base text-white bg-transparent border-0 border-b-2 border-gray-600 appearance-none focus:outline-none focus:ring-0 focus:border-purple-500 peer"
+                                placeholder=" "
+                                required />
+
+                            <label 
+                                for="nome"
+                                class="absolute text-base text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 origin-[0] peer-focus:text-purple-400 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
+
+                                Nome
+
+                            </label>
+
+                        </div>
+
+                        <!-- EMAIL -->
+                        <div class="relative z-0 w-full group">
+
+                            <input 
+                                type="email" 
+                                name="email" 
+                                id="email"
+                                class="block py-3 px-0 w-full text-base text-white bg-transparent border-0 border-b-2 border-gray-600 appearance-none focus:outline-none focus:ring-0 focus:border-pink-500 peer"
+                                placeholder=" "
+                                required />
+
+                            <label 
+                                for="email"
+                                class="absolute text-base text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 origin-[0] peer-focus:text-pink-400 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
+
+                                Email
+
+                            </label>
+
+                        </div>
+
+                        <!-- BOTÃO -->
+                        <button
+                            type="submit"
+                            class="w-full bg-gradient-to-r from-purple-600 to-pink-500 hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(168,85,247,0.5)] transition-all duration-300 text-white font-semibold py-4 rounded-2xl">
+
+                            Inscrever-se
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </section>
+
+            
+
+            <footer class="fixed bottom-0 left-0 z-20 w-full p-4 bg-neutral-primary-soft border-t border-default shadow-sm md:flex md:items-center md:justify-between md:p-6">
+                <span class="text-sm text-body sm:text-center">© 2026 <a href="https://flowbite.com/" class="hover:underline">Breno Redusino</a>. Todos os direitos reservados.
+                </span>
+                <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-body sm:mt-0">
+                    <li>
+                        <a href="#" class="hover:underline me-4 md:me-6">Projeto desenvolvido para a disciplina de Introdução ao Desenvolvimeno Front-End UNIVEM</a>
+                    </li>
+                </ul>
+            </footer>
+
+
+    </body>
+</html>
