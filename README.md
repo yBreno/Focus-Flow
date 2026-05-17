@@ -72,6 +72,8 @@ FocusFlow/
     ├── sininho.png
     ├── sininho-preto.png
     ├── user.png
+    ├── sol.png
+    ├── lua.png
     │
     └── Album/
         ├── album1.jpg
