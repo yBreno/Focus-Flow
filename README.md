@@ -101,7 +101,7 @@ O projeto será hospedado utilizando o GitHub Pages.
 1. Faça o download ou clone este repositório:
 
 ```bash
-git clone LINK_DO_REPOSITORIO
+git clone https://github.com/yBreno/Focus-Flow
 ```
 
 2. Abra a pasta do projeto.
