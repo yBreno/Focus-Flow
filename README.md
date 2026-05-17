@@ -92,7 +92,7 @@ O projeto será hospedado utilizando o GitHub Pages.
 
 🔗 Link do projeto online:
 
-> Em breve
+> https://ybreno.github.io/Focus-Flow/
 
 ---
 
