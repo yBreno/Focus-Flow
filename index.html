@@ -2,17 +2,11 @@
 <html lang="pt-BR">
 
 <head>
-    <!-- Configurações básicas da página -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Tailwind CSS via CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
-    <!-- Título que aparece na aba do navegador -->
     <title>Focus Flow</title>
 
-    <!-- Estilos personalizados usados junto com Tailwind -->
     <style>
         /* Esconde a barra de rolagem horizontal do carrossel */
         ::-webkit-scrollbar {
@@ -87,12 +81,11 @@
 <body class="bg-gradient-to-b from-[#050816] via-[#0B1026] to-black transition-colors duration-500">
 
     <!-- ========================================================= -->
-    <!-- NAVBAR: menu superior fixo com logo, links, tema e menu mobile -->
+    <!-- Navbar -->
     <!-- ========================================================= -->
     <nav class="superficie-tema fixed top-0 start-0 z-50 w-full border-b border-white/10 bg-black/40 backdrop-blur-xl">
         <div class="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-4">
 
-            <!-- Logo do site -->
             <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
                 <img id="logo-navbar" src="Imagens/icon.png" class="h-7" alt="Logo Focus Flow">
 
@@ -104,7 +97,6 @@
             <!-- Botões do lado direito: modo claro/escuro e menu mobile -->
             <div class="flex items-center gap-3 md:order-2 rtl:space-x-reverse">
 
-                <!-- Botão controlado por JavaScript para alternar claro/escuro -->
                 <button
                     type="button"
                     id="alternar-tema"
@@ -117,7 +109,6 @@
                         alt="Ativar modo claro">
                 </button>
 
-                <!-- Avatar simples do usuário, sem dropdown e sem Flowbite -->
                 <div class="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/10 p-1 shadow-lg">
                     <img
                         src="Imagens/user.png"
@@ -125,7 +116,6 @@
                         alt="Foto do usuário">
                 </div>
 
-                <!-- Botão hambúrguer: abre e fecha o menu mobile com JavaScript próprio -->
                 <button
                     type="button"
                     id="botao-menu-mobile"
@@ -140,7 +130,6 @@
                 </button>
             </div>
 
-            <!-- Links principais da navbar -->
             <div id="menu-navegacao" class="hidden w-full items-center justify-between md:order-1 md:flex md:w-auto">
                 <ul class="mt-4 flex flex-col rounded-base border border-default bg-neutral-secondary-soft p-4 font-medium md:mt-0 md:flex-row md:space-x-8 md:border-0 md:bg-neutral-primary md:p-0 rtl:space-x-reverse">
                     <li>
@@ -173,12 +162,11 @@
 
 
     <!-- ========================================================= -->
-    <!-- HERO: apresentação principal do projeto -->
+    <!-- HERO-->
     <!-- ========================================================= -->
     <section class="secao-tema overflow-hidden bg-gradient-to-b from-[#050816] via-[#0B1026] to-black py-16 text-white">
         <div class="mx-auto max-w-screen-xl px-4 py-8 text-center lg:px-12 lg:py-16">
 
-            <!-- Aviso de lançamento -->
             <a
                 href="#"
                 class="mb-7 inline-flex items-center justify-between rounded-full bg-gray-100 px-1 py-1 pr-4 text-sm text-gray-700 hover:bg-gray-200 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700"
@@ -197,7 +185,6 @@
                 </svg>
             </a>
 
-            <!-- Título e descrição -->
             <h1 class="texto-tema mb-4 text-4xl font-extrabold leading-none tracking-tight text-white md:text-5xl lg:text-6xl">
                 Sinta a música
                 <br>
@@ -208,7 +195,6 @@
                 Milhões de músicas, podcasts e playlists personalizadas esperando por você.
             </p>
 
-            <!-- Botões de ação do hero -->
             <div class="mb-8 flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-x-4 sm:space-y-0 lg:mb-16">
                 <a
                     href="#"
@@ -266,7 +252,7 @@
 
 
     <!-- ========================================================= -->
-    <!-- CARROSSEL: lista horizontal de lançamentos recentes -->
+    <!-- CARROSSEL-->
     <!-- ========================================================= -->
     <section class="secao-tema overflow-hidden bg-gradient-to-b from-[#050816] via-[#0B1026] to-black py-16 text-white">
 
@@ -277,7 +263,6 @@
 
         <div class="relative">
 
-            <!-- Container rolável controlado pelo JavaScript -->
             <div id="carrossel" class="flex gap-6 overflow-x-auto scroll-smooth px-8">
 
                 <!-- Card 1 -->
@@ -453,7 +438,7 @@
 
 
     <!-- ========================================================= -->
-    <!-- NEWSLETTER: formulário de cadastro simples -->
+    <!-- Formulario -->
     <!-- ========================================================= -->
     <section class="secao-tema bg-gradient-to-b from-[#050816] via-[#0B1026] to-black px-8 py-20 text-white">
         <div class="mx-auto max-w-xl">
@@ -474,10 +459,9 @@
                 Receba novidades, playlists e lançamentos exclusivos.
             </p>
 
-            <!-- Campos do cadastro -->
+          
             <form class="space-y-8">
 
-                <!-- Campo: nome -->
                 <div class="group relative z-0 w-full">
                     <input
                         type="text"
@@ -494,7 +478,7 @@
                     </label>
                 </div>
 
-                <!-- Campo: email -->
+        
                 <div class="group relative z-0 w-full">
                     <input
                         type="email"
@@ -511,7 +495,7 @@
                     </label>
                 </div>
 
-                <!-- Botão de envio do formulário -->
+         
                 <button
                     type="submit"
                     class="group relative w-full overflow-hidden rounded-2xl bg-gradient-to-r from-purple-600 via-pink-500 to-purple-600 bg-[length:200%] py-4 font-bold text-white transition-all duration-500 hover:scale-[1.03] hover:bg-right hover:shadow-[0_0_40px_rgba(168,85,247,0.6)]">
@@ -526,12 +510,11 @@
 
 
     <!-- ========================================================= -->
-    <!-- FOOTER: informações finais e links sociais -->
+    <!-- Rodape -->
     <!-- ========================================================= -->
     <footer class="superficie-tema mt-20 border-t border-white/10 bg-black/40 px-8 py-8 backdrop-blur-xl">
         <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 md:flex-row">
 
-            <!-- Logo e slogan -->
             <div class="flex items-center gap-3">
                 <img id="logo-rodape" src="Imagens/icon.png" class="h-10 w-10" alt="Logo Focus Flow">
 
@@ -546,14 +529,12 @@
                 </div>
             </div>
 
-            <!-- Créditos do projeto -->
             <div class="text-center">
                 <p class="texto-suave-tema text-sm text-gray-400">
                     © 2026 Breno Redusino — Projeto acadêmico desenvolvido para UNIVEM
                 </p>
             </div>
 
-            <!-- Links sociais -->
             <div class="flex items-center gap-5">
                 <a href="#" class="texto-suave-tema text-gray-400 transition-all duration-300 hover:text-red-500">
                     YouTube
@@ -572,10 +553,9 @@
 
 
     <!-- ========================================================= -->
-    <!-- JAVASCRIPT: tema claro/escuro e movimento do carrossel -->
+    <!-- JAVASCRIPT-->
     <!-- ========================================================= -->
     <script>
-        // Captura os elementos que serão usados nas interações.
         const carrossel = document.getElementById('carrossel');
         const botaoTema = document.getElementById('alternar-tema');
         const botaoMenuMobile = document.getElementById('botao-menu-mobile');
@@ -660,7 +640,6 @@
                 behavior: 'smooth'
             });
 
-            // Quando chega ao final, volta suavemente para o começo.
             if (carrossel.scrollLeft + carrossel.clientWidth >= carrossel.scrollWidth - 10) {
                 setTimeout(() => {
                     carrossel.scrollTo({
